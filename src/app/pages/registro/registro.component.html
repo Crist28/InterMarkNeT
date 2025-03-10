@@ -1,0 +1,262 @@
+<app-header></app-header>
+
+<div class="container">
+  <div id="gototop"></div>
+  <div class="row">
+    <div id="sidebar" class="span3">
+      <div class="well well-small">
+        <ul class="nav nav-list">
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Fashion</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Watches</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Fine Jewelry</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Fashion Jewelry</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Engagement & Wedding</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Men's Jewelry</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Vintage & Antique</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Loose Diamonds
+            </a>
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>Loose Beads</a
+            >
+          </li>
+          <li>
+            <a href="products.html"
+              ><span class="icon-chevron-right"></span>See All Jewelry &
+              Watches</a
+            >
+          </li>
+          <li style="border: 0">&nbsp;</li>
+          <li>
+            <a class="totalInCart" href="cart.html"
+              ><strong
+                >Total Amount
+                <span
+                  class="badge badge-warning pull-right"
+                  style="line-height: 18px"
+                  >$448.42</span
+                ></strong
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="well well-small alert alert-warning cntr">
+        <h2>50% Discount</h2>
+        <p>
+          only valid for online order. <br /><br /><a
+            class="defaultBtn"
+            href="#"
+            >Click here
+          </a>
+        </p>
+      </div>
+      <div class="well well-small">
+        <a href="#"><img src="img/paypal.jpg" alt="payment method paypal" /></a>
+      </div>
+
+      <a class="shopBtn btn-block" href="#"
+        >Upcoming products <br /><small>Click to view</small></a
+      >
+      <br />
+      <br />
+    </div>
+    <div class="span9">
+      <ul class="breadcrumb">
+        <li><a href="index.html">Inicio</a> <span class="divider">/</span></li>
+        <li class="active">Registro</li>
+      </ul>
+      <h3>Registro</h3>
+      <hr class="soft" />
+      <div class="well">
+        <form class="form-horizontal" (ngSubmit)="onSubmit()">
+          <h3>Tus Datos Personales</h3>
+          <div class="control-group">
+            <label class="control-label">Genero <sup></sup></label>
+            <div class="controls">
+              <select class="span1" [(ngModel)]="genero" name="genero">
+                <option value="">-</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputFname"
+              >Nombres <sup>*</sup></label
+            >
+            <div class="controls">
+              <input
+                type="text"
+                placeholder="First Name"
+                [(ngModel)]="nombres"
+                name="nombres"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputLname"
+              >Apellidos <sup>*</sup></label
+            >
+            <div class="controls">
+              <input
+                type="text"
+                placeholder="Apellidos"
+                [(ngModel)]="apellidos"
+                name="apellidos"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputEmail"
+              >Correo <sup>*</sup></label
+            >
+            <div class="controls">
+              <input
+                type="text"
+                placeholder="Correo"
+                [(ngModel)]="email"
+                name="email"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Contraseña <sup>*</sup></label>
+            <div class="controls">
+              <input
+                type="password"
+                placeholder="Contraseña"
+                [(ngModel)]="password"
+                name="password"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputLname"
+              >Pais <sup></sup
+            ></label>
+            <div class="controls">
+              <input
+                type="text"
+                placeholder="Pais"
+                [(ngModel)]="pais"
+                name="pais"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputLname"
+              >Telefono <sup></sup
+            ></label>
+            <div class="controls">
+              <input
+                type="text"
+                placeholder="telefono"
+                [(ngModel)]="telefono"
+                name="telefono"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputLname"
+              >Documento <sup></sup
+            ></label>
+            <div class="controls">
+              <input
+                type="text"
+                placeholder="Documento"
+                [(ngModel)]="dni"
+                name="dni"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"
+              >Fecha De Nacimiento <sup>*</sup></label
+            >
+            <div class="controls">
+              <select
+                class="span1"
+                name="days"
+                placeholder="Fecha De Nacimiento"
+                [(ngModel)]="f_Nacimiento"
+                name="f_Nacimiento"
+              >
+                <option value="">-</option>
+                <option value="1">1&nbsp;&nbsp;</option>
+                <option value="2">2&nbsp;&nbsp;</option>
+                <option value="3">3&nbsp;&nbsp;</option>
+                <option value="4">4&nbsp;&nbsp;</option>
+                <option value="5">5&nbsp;&nbsp;</option>
+                <option value="6">6&nbsp;&nbsp;</option>
+                <option value="7">7&nbsp;&nbsp;</option>
+              </select>
+              <select class="span1" name="days">
+                <option value="">-</option>
+                <option value="1">1&nbsp;&nbsp;</option>
+                <option value="2">2&nbsp;&nbsp;</option>
+                <option value="3">3&nbsp;&nbsp;</option>
+                <option value="4">4&nbsp;&nbsp;</option>
+                <option value="5">5&nbsp;&nbsp;</option>
+                <option value="6">6&nbsp;&nbsp;</option>
+                <option value="7">7&nbsp;&nbsp;</option>
+              </select>
+              <select class="span1" name="days">
+                <option value="">-</option>
+                <option value="1">1&nbsp;&nbsp;</option>
+                <option value="2">2&nbsp;&nbsp;</option>
+                <option value="3">3&nbsp;&nbsp;</option>
+                <option value="4">4&nbsp;&nbsp;</option>
+                <option value="5">5&nbsp;&nbsp;</option>
+                <option value="6">6&nbsp;&nbsp;</option>
+                <option value="7">7&nbsp;&nbsp;</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <input
+                type="submit"
+                name="submitAccount"
+                value="Register"
+                class="exclusive shopBtn"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
